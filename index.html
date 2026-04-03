@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каталист Календарь — Установка</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f172a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+  .card { background: #1e293b; border-radius: 20px; padding: 40px; max-width: 560px; width: 100%; border: 1px solid #334155; }
+  h1 { color: #f1f5f9; font-size: 24px; margin-bottom: 8px; }
+  .ver { color: #60a5fa; font-size: 14px; font-weight: 600; margin-bottom: 20px; }
+  p { color: #94a3b8; line-height: 1.6; margin-bottom: 24px; font-size: 15px; }
+  .bm-link {
+    display: block; background: #3b82f6; color: white; text-decoration: none;
+    padding: 16px 24px; border-radius: 12px; font-size: 16px; font-weight: 700;
+    text-align: center; border: 2px dashed #60a5fa; cursor: grab;
+    transition: background 0.2s; user-select: none;
+  }
+  .bm-link:hover { background: #2563eb; }
+  .step { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+  .step-num { background: #3b82f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .step-text { color: #cbd5e1; font-size: 14px; line-height: 1.5; }
+  .hint { background: #0f172a; border-radius: 10px; padding: 14px; margin-top: 24px; color: #64748b; font-size: 13px; }
+  .hint b { color: #60a5fa; }
+  .update { background: #064e3b; border: 1px solid #059669; border-radius: 10px; padding: 14px; margin-top: 16px; color: #6ee7b7; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>📅 Каталист Календарь</h1>
+  <div class="ver">v4.2 • GitHub Pages Edition</div>
+  <p>Автоматические обновления — закладка всегда загружает последнюю версию с сервера.</p>
+  
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-text">Покажите <b>панель закладок</b> (Ctrl+Shift+B / Cmd+Shift+B)</div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-text"><b>Перетащите</b> синюю кнопку ниже на панель закладок</div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-text">Откройте <b>AmoCRM</b> → нажмите закладку</div>
+  </div>
+
+  <a class="bm-link" href="javascript:void(function(){var s=document.createElement('script');s.src='https://maria177777773.github.io/catalyst-calendar/calendar.js?v='+Date.now();document.body.appendChild(s)}())">📅 Каталист Календарь</a>
+
+  <div class="update">✅ <b>Автообновления:</b> Закладка загружает код с GitHub Pages. Обновления подхватываются автоматически — переустанавливать закладку больше не нужно!</div>
+
+  <div class="hint">💡 <b>Для коллег:</b> отправьте эту ссылку — <b>maria177777773.github.io/catalyst-calendar</b></div>
+</div>
+</body>
+</html>
