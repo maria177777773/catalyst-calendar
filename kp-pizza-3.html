@@ -607,6 +607,45 @@
       transform: none;
     }
   }
+
+
+  /* Hero photo on page 1 */
+  .hero-photo {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-photo .hero-photo-overlay {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 20px 30px 18px;
+    background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.30) 65%, rgba(0,0,0,0) 100%);
+    color: #fff;
+  }
+  .hero-photo .hero-photo-subtitle {
+    font-family: 'TT Commons Pro', 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #fff;
+  }
+  /* overwrite header-details-card to 3 columns */
+  .header-details-card {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0 24px !important;
+    padding: 18px 28px !important;
+  }
+  .header-details-card .field .value { font-size: 17px; }
 </style>
 </head>
 <body>
@@ -627,30 +666,24 @@
 
   <div class="header-details">
     <div class="header-section-title">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</div>
+    <div class="hero-photo">
+      <img src="https://static.tildacdn.com/tild3866-6162-4331-b562-353939373935/0X3A5521.jpg" alt="WOW Пицца" />
+      <div class="hero-photo-overlay">
+        <div class="hero-photo-subtitle">Живой огонь &middot; итальянская печь &middot; пицца от бренд-шефа</div>
+      </div>
+    </div>
     <div class="header-details-card">
       <div class="field">
-        <span class="label">Клиент</span>
-        <span class="value">Сбербанк</span>
-      </div>
-      <div class="field">
-        <span class="label">Программа</span>
-        <span class="value">WOW Пицца</span>
-      </div>
-      <div class="field">
-        <span class="label">Дата мероприятия</span>
+        <span class="label">Дата</span>
         <span class="value">26 июля 2026</span>
       </div>
       <div class="field">
-        <span class="label">Количество участников</span>
+        <span class="label">Участники</span>
         <span class="value">200 человек</span>
       </div>
       <div class="field">
         <span class="label">Площадка</span>
         <span class="value">Apple Hill</span>
-      </div>
-      <div class="field">
-        <span class="label">Тайминг</span>
-        <span class="value">16:00 &ndash; 20:00</span>
       </div>
     </div>
   </div>
