@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Варианты шапки + блока КП — Каталист</title>
+<link rel="stylesheet" href="https://fonts.tildacdn.com/tildafonts/b_ttcommonsprolight_regular_italic/ttcommonspro.css">
+<style>
+:root {
+  --green: #2FB257;
+  --green-dark: #239345;
+  --cream: #FFFAF5;
+  --warm: #FFF5E8;
+  --ink: #1A1A1A;
+  --muted: #6B6B6B;
+  --radius: 16px;
+  --radius-lg: 24px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'TT Commons Pro', system-ui, sans-serif;
+  background: #EEE;
+  color: var(--ink);
+  padding: 40px 20px;
+}
+
+h1.main-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #222;
+}
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.variant {
+  width: 210mm;
+  margin: 0 auto 60px;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+}
+.variant-label {
+  background: #333;
+  color: white;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.variant-desc {
+  padding: 10px 24px;
+  background: #FFF;
+  color: #555;
+  font-size: 13px;
+  border-bottom: 1px solid #EEE;
+}
+
+/* ============ ВАРИАНТ 1: Компактная зелёная шапка + карточка КП ============ */
+.v1-header {
+  background: var(--green);
+  color: white;
+  padding: 24px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.v1-logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.v1-logo::before {
+  content: '';
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+.v1-tag {
+  font-size: 14px;
+  opacity: 0.9;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.v1-card {
+  margin: 28px 36px 28px;
+  padding: 28px 32px;
+  background: white;
+  border-radius: var(--radius);
+  border: 2px solid var(--green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.v1-info { flex: 1; }
+.v1-info-label {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.v1-info-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.v1-divider {
+  width: 1px;
+  height: 50px;
+  background: #E5E5E5;
+}
+
+/* ============ ВАРИАНТ 2: Шапка с градиентом + две плашки ============ */
+.v2-header {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  color: white;
+  padding: 28px 36px 48px;
+  position: relative;
+}
+.v2-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.v2-logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.v2-date {
+  font-size: 13px;
+  opacity: 0.85;
+  font-weight: 500;
+}
+.v2-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+.v2-pills {
+  margin: -24px 36px 24px;
+  display: flex;
+  gap: 12px;
+}
+.v2-pill {
+  flex: 1;
+  background: white;
+  padding: 18px 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--green);
+}
+.v2-pill-label {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.v2-pill-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ============ ВАРИАНТ 3: Минимализм — тонкая полоска + крупные цифры ============ */
+.v3-header {
+  background: var(--green);
+  color: white;
+  padding: 16px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.v3-logo {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.v3-header-right {
+  font-size: 13px;
+  opacity: 0.9;
+}
+.v3-hero {
+  padding: 36px 36px 20px;
+  text-align: center;
+}
+.v3-hero-label {
+  font-size: 12px;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.v3-hero-title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.v3-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px 0 32px;
+  border-top: 1px solid #E8E2DA;
+  margin: 0 36px;
+}
+.v3-stat {
+  text-align: center;
+}
+.v3-stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.v3-stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* ============ ВАРИАНТ 4: Шапка-карточка (всё в одном блоке) ============ */
+.v4-wrap {
+  padding: 28px;
+}
+.v4-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid #E8E2DA;
+}
+.v4-top {
+  background: var(--green);
+  color: white;
+  padding: 20px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.v4-logo {
+  font-size: 18px;
+  font-weight: 700;
+}
+.v4-chip {
+  background: rgba(255,255,255,0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.v4-body {
+  padding: 24px 28px;
+}
+.v4-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+.v4-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.v4-item-label {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.v4-item-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.decision-note {
+  max-width: 210mm;
+  margin: 40px auto;
+  background: #FFF9E8;
+  border: 1px solid #F0D98A;
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+.decision-note b { color: #222; }
+</style>
+</head>
+<body>
+
+<h1 class="main-title">4 варианта шапки + блока КП</h1>
+<div class="subtitle">Выбери один — переверстаю под него финальное КП</div>
+
+<!-- ВАРИАНТ 1 -->
+<div class="variant">
+  <div class="variant-label">🟢 Вариант 1 — компактно, строго</div>
+  <div class="variant-desc">Минималистичная зелёная шапка + одна широкая карточка КП. Экономит вертикали ~20% vs текущая.</div>
+  <div class="v1-header">
+    <div class="v1-logo">КАТАЛИСТ</div>
+    <div class="v1-tag">Коммерческое предложение</div>
+  </div>
+  <div class="v1-card">
+    <div class="v1-info">
+      <div class="v1-info-label">Программа</div>
+      <div class="v1-info-value">WOW Пицца-Тимбилдинг</div>
+    </div>
+    <div class="v1-divider"></div>
+    <div class="v1-info">
+      <div class="v1-info-label">Площадка</div>
+      <div class="v1-info-value">Мегаполис</div>
+    </div>
+    <div class="v1-divider"></div>
+    <div class="v1-info">
+      <div class="v1-info-label">Участников</div>
+      <div class="v1-info-value">200 человек</div>
+    </div>
+  </div>
+</div>
+
+<!-- ВАРИАНТ 2 -->
+<div class="variant">
+  <div class="variant-label">🟢 Вариант 2 — градиент + плашки (парят над шапкой)</div>
+  <div class="variant-desc">Современный стиль — шапка с градиентом, плашки наезжают снизу. Компактнее и современнее.</div>
+  <div class="v2-header">
+    <div class="v2-header-top">
+      <div class="v2-logo">КАТАЛИСТ · Event-агентство</div>
+      <div class="v2-date">17 апреля 2026</div>
+    </div>
+    <div class="v2-title">WOW Пицца-Тимбилдинг</div>
+  </div>
+  <div class="v2-pills">
+    <div class="v2-pill">
+      <div class="v2-pill-label">Площадка</div>
+      <div class="v2-pill-value">Мегаполис</div>
+    </div>
+    <div class="v2-pill">
+      <div class="v2-pill-label">Участники</div>
+      <div class="v2-pill-value">200 человек</div>
+    </div>
+    <div class="v2-pill">
+      <div class="v2-pill-label">Формат</div>
+      <div class="v2-pill-value">Open-air · 3 часа</div>
+    </div>
+  </div>
+</div>
+
+<!-- ВАРИАНТ 3 -->
+<div class="variant">
+  <div class="variant-label">🟢 Вариант 3 — минимализм, цифры крупно</div>
+  <div class="variant-desc">Тонкая полоска вверху, акцент на названии программы и цифрах. Самый строгий и премиальный.</div>
+  <div class="v3-header">
+    <div class="v3-logo">КАТАЛИСТ</div>
+    <div class="v3-header-right">catalystrussia.ru · +7 (495) ...</div>
+  </div>
+  <div class="v3-hero">
+    <div class="v3-hero-label">Коммерческое предложение</div>
+    <div class="v3-hero-title">WOW Пицца-Тимбилдинг</div>
+  </div>
+  <div class="v3-stats">
+    <div class="v3-stat">
+      <div class="v3-stat-value">200</div>
+      <div class="v3-stat-label">Участников</div>
+    </div>
+    <div class="v3-stat">
+      <div class="v3-stat-value">3 ч</div>
+      <div class="v3-stat-label">Длительность</div>
+    </div>
+    <div class="v3-stat">
+      <div class="v3-stat-value">Мегаполис</div>
+      <div class="v3-stat-label">Площадка</div>
+    </div>
+  </div>
+</div>
+
+<!-- ВАРИАНТ 4 -->
+<div class="variant">
+  <div class="variant-label">🟢 Вариант 4 — всё в одной карточке</div>
+  <div class="variant-desc">Максимально компактный: шапка и данные в одной рамке. Меньше всего занимает по вертикали.</div>
+  <div class="v4-wrap">
+    <div class="v4-card">
+      <div class="v4-top">
+        <div class="v4-logo">КАТАЛИСТ</div>
+        <div class="v4-chip">КП · апр 2026</div>
+      </div>
+      <div class="v4-body">
+        <div class="v4-title">WOW Пицца-Тимбилдинг</div>
+        <div class="v4-grid">
+          <div>
+            <div class="v4-item-label">Площадка</div>
+            <div class="v4-item-value">Мегаполис</div>
+          </div>
+          <div>
+            <div class="v4-item-label">Участников</div>
+            <div class="v4-item-value">200 человек</div>
+          </div>
+          <div>
+            <div class="v4-item-label">Формат</div>
+            <div class="v4-item-value">Open-air · 3 ч</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="decision-note">
+  <b>План после выбора:</b><br>
+  1. Применю выбранную шапку к финальному КП<br>
+  2. Уберу футер агентства (ты сама сказала — дам 60-80px свободного места)<br>
+  3. Ужму блок «Что включено» (убежу в сетку плотнее)<br>
+  4. Генерирую PDF в ОДНОМ масштабе на обе страницы — без костылей, 1-в-1<br>
+  <br>
+  <b>Высота каждого варианта шапки+КП:</b><br>
+  · В1 — ~150px (компактно)<br>
+  · В2 — ~200px (нормально, модный)<br>
+  · В3 — ~200px (строго)<br>
+  · В4 — ~180px (рекорд компактности)
+</div>
+
+</body>
+</html>
