@@ -546,20 +546,36 @@
   }
 
   /* ===== PRINT ===== */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
   @media print {
-    body {
+    html, body {
       background: #fff;
+      margin: 0;
+      padding: 0;
     }
 
     .page {
       margin: 0;
       box-shadow: none;
       width: 210mm;
+      height: 297mm;
       min-height: 297mm;
+      max-height: 297mm;
+      overflow: hidden;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
     }
 
     .page-break {
-      page-break-after: always;
+      display: none;
     }
 
     .btn:hover {
