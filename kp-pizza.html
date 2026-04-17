@@ -373,14 +373,14 @@
   .two-col-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    margin: 6px 0 24px;
+    gap: 22px;
+    margin: 18px 0 32px;
   }
 
   .two-col-row .col-block .chip {
-    margin: 0 0 12px;
-    font-size: 11px;
-    padding: 8px 18px;
+    margin: 0 0 14px;
+    font-size: 12px;
+    padding: 10px 22px;
   }
 
   .two-col-row .col-block .card {
@@ -398,8 +398,8 @@
   .pricing-block {
     background: linear-gradient(135deg, #f0faf3, #e8f7ed);
     border-radius: var(--radius);
-    padding: 28px 28px;
-    margin: 24px 0;
+    padding: 40px 28px 36px;
+    margin: 32px 0 28px;
     border: 2px solid rgba(47,178,87,0.15);
     text-align: center;
   }
@@ -407,19 +407,19 @@
   .pricing-label {
     font-family: 'TT Commons Pro', 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     color: var(--green-dark);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   .pricing-program {
     font-family: 'TT Commons Pro', 'Roboto', sans-serif;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 24px;
     color: var(--text);
-    margin-bottom: 2px;
+    margin-bottom: 8px;
   }
 
   .pricing-details {
@@ -431,14 +431,14 @@
   .pricing-amount {
     font-family: 'TT Commons Pro', 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 42px;
+    font-size: 56px;
     color: var(--green);
     line-height: 1.1;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   .pricing-amount span {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
   }
 
@@ -546,6 +546,11 @@
     display: flex;
     align-items: center;
     gap: 6px;
+  }
+
+
+  .pricing-detail td {
+    padding: 12px 4px !important;
   }
 
   /* ===== PRINT ===== */
@@ -744,8 +749,8 @@
     </div>
 
     <!-- Детальный расчёт -->
-    <div class="pricing-detail" style="background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 24px; margin: -10px 0 20px; border-left: 4px solid var(--green);">
-      <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+    <div class="pricing-detail" style="background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px 30px; margin: -4px 0 24px; border-left: 4px solid var(--green);">
+      <table style="width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5;">
         <tr style="border-bottom: 1px solid #f0ebe6;">
           <td style="padding: 8px 0; color: var(--text-secondary);">Стоимость программы</td>
           <td style="padding: 8px 0; text-align: right; font-weight: 600;">700 000 &#8381;</td>
