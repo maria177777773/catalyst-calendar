@@ -158,7 +158,7 @@
   .chip-warm {
     background: linear-gradient(135deg, var(--green) 0%, #34c462 100%);
     color: #fff;
-    box-shadow: 0 4px 14px rgba(47,178,87,0.25);
+    box-shadow: 0 2px 6px rgba(47,178,87,0.15);
   }
 
   /* ===== CARDS ===== */
@@ -640,6 +640,7 @@
       min-height: 297mm;
       page-break-after: always;
       page-break-inside: avoid;
+      break-inside: avoid;
     }
 
     .page:last-child {
@@ -653,6 +654,16 @@
     .btn:hover {
       transform: none;
     }
+
+    /* Уплотнение стр.1 — убираем лишние 90px, чтобы A4 не переполнялась */
+    .header-banner { padding: 20px 40px 16px !important; }
+    .header-details { padding: 12px 40px 10px !important; }
+    .header-section-title { margin-bottom: 10px !important; }
+    .hero-photo { height: 110px !important; margin-bottom: 6px !important; }
+    .page-inner { padding-bottom: 12px !important; }
+    /* Немного компактнее карточки на стр.1 */
+    .card { padding: 16px 20px !important; }
+    .card ul li, .list-simple li { margin-bottom: 4px !important; }
   }
 
 
